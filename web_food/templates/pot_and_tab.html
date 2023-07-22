@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/pot_and_tab.html.css' %}">
+    <title>{{title}}</title>
+</head>
+<body>
+<header>
+    <button class="button_restart">Сбросить</button>
+    <h2>
+        <!------- UserName -------->
+        <a href="{% url 'logout' %}">Выйти</a>
+        <p>Суповик-Затейник:</p>
+        <p class="user_name">
+            Иван Николаевич
+
+        </p>
+    </h2>
+    <button class="button_finish">Готовить</button>
+</header>
+<main>
+
+    <div class="table__and__pot">
+
+        <div class="table">
+
+                 <div class="table__all__pages">
+                    <div class="table__top__all__tabs">
+                        <button class="tab_header tab_cliked" data-tab="0">Бульон</button>
+                        <button class="tab_header" data-tab="1">Овощи</button>
+                        <button class="tab_header" data-tab="2">Крупы</button>
+                        <button class="tab_header" data-tab="3">Сливки</button>
+                        <button class="tab_header" data-tab="4">Зелень</button>
+                    </div>
+
+                    <div class="page" style="display: block;">
+                        <div class="page__broth" >
+                                    <h2>Выберим для начала бульон: </h2>
+                            <button class="ingridient">Куриный</button>
+                            <button class="ingridient">Мясной</button>
+                            <button class="ingridient">Рыбный</button>
+                            <button class="ingridient">Oвощной отвар</button>
+                        </div>
+                    </div>
+                    <div class="page" style="display: none;">
+                        <div class="page__vegetables">
+                                    <h2> Ну а теперь каких овощей добавим ? </h2>
+                            <button class="ingridient">лук</button>
+                            <button class="ingridient">морковь</button>
+                            <button class="ingridient">картофель</button>
+                            <button class="ingridient">лук порей</button>
+                            <button class="ingridient">капуста</button>
+                            <button class="ingridient">свекла</button>
+                            <button class="ingridient">кабачки</button>
+                            <button class="ingridient">шпинат</button>
+                            <button class="ingridient">тыква</button>
+                            <button class="ingridient">баклажан</button>
+                            <button class="ingridient">грибы</button>
+                            <button class="ingridient">щавель</button>
+                            <button class="ingridient">цуккини</button>
+                            <button class="ingridient">спаржа</button>
+                            <button class="ingridient">брокколи</button>
+                            <button class="ingridient">томат</button>
+                            <button class="ingridient">горошек</button>
+                            <button class="ingridient">кукуруза</button>
+                            <button class="ingridient">пекинка</button>
+                            <button class="ingridient">репа</button>
+
+                            <button class="ingridient">корень <br> сельдерея</button>
+                            <button class="ingridient">болгар <br>перец</button>
+                            <button class="ingridient">сельдерей <br>стебель</button>
+                            <button class="ingridient">цветная<br> капуста</button>
+                        </div>
+                    </div>
+                    <div class="page" style="display: none">
+                        <div class="page__cereal" >
+                                    <h2>Заглянем на полку с крупой !</h2>
+                            <button class="ingridient">вермишель</button>
+                            <button class="ingridient">горох</button>
+                            <button class="ingridient">фасоль</button>
+
+                            <button class="ingridient">перловка</button>
+                            <button class="ingridient">полба</button>
+                            <button class="ingridient">гречка</button>
+                            <button class="ingridient">рис</button>
+                            <button class="ingridient">маш</button>
+                            <button class="ingridient">пшено</button>
+                            <button class="ingridient">булгур</button>
+                            <button class="ingridient">красная чечевица</button>
+                            <button class="ingridient">зеленая чечевица</button>
+                        </div>
+                    </div>
+                    <div class="page" style="display: none">
+                        <div class="page__milk">
+                                    <h2> Может добавим сливки или сыр ? </h2>
+                            <button class="ingridient">сливки</button>
+                            <button class="ingridient">сыр</button>
+                        </div>
+                    </div>
+
+                    <div class="page" style="display: none">
+
+                        <div class="page__green">
+                                    <h2> Ну и как же без ароматной зелень !? </h2>
+                            <button class="ingridient">кинза</button>
+                            <button class="ingridient">петрушка</button>
+                            <button class="ingridient">укроп</button>
+                            <button class="ingridient">чеснок</button>
+                            <button class="ingridient">базилик</button>
+                            <button class="ingridient">лук зеленый</button>
+                            <button class="ingridient">Вся зелень</button>
+                        </div>
+                </div>
+
+        </div>
+
+        </div>
+
+
+        <div class="pot_background_video" style="background-image: url('{% static 'img/translucent-image.png' %}')">
+
+            <div class="pot" id="koctpyla">
+                <ul id="koctpyla-list">
+                        <!-- <li>Щепотка любви !</li>
+                        <li>Горстка заботы ! </li> -->
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+<footer>
+</footer>
+
+    <div class="pop_up_wrapper">
+        <div class="pop_up_window">
+            <button class="button_close">X</button>
+            <div class="pop_order">
+                <h2>Вкусняшка супчик !</h2>
+                <ul id="check_list">
+                    <li>состав</li>
+                    <li>все вкусно</li>
+                </ul>
+            </div>
+<!--            <a href="{% url 'send email' %}"><button class="button_close">Отправить</button></a>-->
+             <button class="button_close">Отправить</button>
+
+           </div>
+    </div>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
+
+

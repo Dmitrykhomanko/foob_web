@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index_registration.css' %}">
+    <title>Регистрация</title>
+</head>
+<body>
+
+    <main style="background-image: url('{% static 'img/translucent-image (1).png' %}');">
+        <div class="wrapper__identification">
+            <div class="section_user_enter">
+                <h1> ЗдраСте Вам !!! </h1>
+                <h2>Вход </h2>
+                <form method="post">
+                    {% csrf_token %}
+<!--                <input class="input_user_name_enter" type="text" placeholder="введите Логин">-->
+<!--                <input class="input_user_password_enter" type="text" placeholder="введите Пароль">-->
+                  <div class="form-field">
+                        {{ form1.username }}
+                  </div>
+                  <div class="form-field">
+                        {{ form1.password }}
+                  </div>
+                <button type="submit" class="button_user_enter"> Вход</button>
+                </form>
+            </div>
+
+
+            <div class="section_user_enter">
+                <h1> Регистрация </h1>
+                  <form method="post">
+                    {% csrf_token %}
+                      <div class="form-field">
+                        {{ form2.username }}
+                      </div>
+                      <div class="form-field">
+                        {{ form2.password1 }}
+                      </div>
+                      <div class="form-field">
+                        {{ form2.password2 }}
+                      </div>
+                    <button  type="submit" class="button_new_user_registration">Зарегистрироваться</button>
+                  </form>
+
+<!--                <input class="user_name_input_resistr" type="text" placeholder="придумайте Логин">-->
+<!--                <input class="user_password_input_registr" type="password" placeholder="придумайте Пароль">-->
+
+
+            </div>
+        </div>
+
+    </main>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
