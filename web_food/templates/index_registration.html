@@ -1,3 +1,4 @@
+{% load widget_tweaks %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -8,52 +9,50 @@
     <title>Регистрация</title>
 </head>
 <body>
+<main style="background-image: url('{% static 'img/translucent-image (1).png' %}');">
+        <h1 class="zdraste"> ЗдраСте Вам !!! </h1>
 
-    <main style="background-image: url('{% static 'img/translucent-image (1).png' %}');">
         <div class="wrapper__identification">
-            <div class="section_user_enter">
-                <h1> ЗдраСте Вам !!! </h1>
-                <h2>Вход </h2>
-                <form method="post">
+
+            <div class="tabs_header">
+                <h2 class="enter_tab active" data-tab="#tab_1"> Войти </h2>
+                <h2  class="resist_tab" data-tab="#tab_2"> Регистрация </h2>
+            </div>
+
+
+            <div class="page_enter can_see">
+                <form method="post" class="user_enter">
                     {% csrf_token %}
-<!--                <input class="input_user_name_enter" type="text" placeholder="введите Логин">-->
-<!--                <input class="input_user_password_enter" type="text" placeholder="введите Пароль">-->
-                  <div class="form-field" aria-placeholder="введите логин">
-                        {{ form1.username }}
-                  </div>
-                  <div class="form-field" aria-placeholder="введите пароль">
-                        {{ form1.password }}
-                  </div>
-                <button type="submit" class="button_user_enter"> Вход</button>
+                    <div class="first form-field">
+                        {% render_field form1.username class="css_class_1" placeholder="введите имя" %}
+                    </div>
+                    <div class="form-field" aria-placeholder="введите пароль">
+                        {% render_field form1.password class="css_class_1" placeholder="введите пароль" %}
+                    </div>
+                    <button type="submit" class="button_user_enter"> Вход</button>
                 </form>
             </div>
 
-
-            <div class="section_user_enter">
-                <h1> Регистрация </h1>
-                  <form method="post">
+            <div class="page_registration">
+                 <form method="post" class="user_registration">
                     {% csrf_token %}
-                      <div class="form-field" aria-placeholder="Придумайте логин">
-                        {{ form2.username }}
-                      </div>
-                      <div class="form-field" aria-placeholder="Придумайте Пароль">
-                        {{ form2.password1 }}
-                      </div>
-                      <div class="form-field" aria-placeholder="Повторите Пароль">
-                        {{ form2.password2 }}
-                      </div>
-                    <button  type="submit" class="button_new_user_registration">Зарегистрироваться</button>
-                  </form>
-
-<!--                <input class="user_name_input_resistr" type="text" placeholder="придумайте Логин">-->
-<!--                <input class="user_password_input_registr" type="password" placeholder="придумайте Пароль">-->
-
-
+                    <div class="form-field">
+                        {% render_field form2.username class="css_class_1" placeholder="придумайте имя" %}
+                    </div>
+                    <div class="form-field" aria-placeholder="Придумайте Пароль">
+                        {% render_field form2.password1 class="css_class_1" placeholder="придумайте пароль" %}
+                    </div>
+                    <div class="form-field" aria-placeholder="повторите Пароль">
+                        {% render_field form2.password2 class="css_class_1" placeholder="повторите пароль" %}
+                    </div>
+                    <button  type="submit" class="button_registration">Зарегистрироваться</button>
+                 </form>
             </div>
+
         </div>
+      </main>
 
-    </main>
 
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/registration.js' %}"></script>
 </body>
 </html>

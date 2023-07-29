@@ -12,13 +12,12 @@
     <button class="button_restart">Сбросить</button>
     <h2>
         <!------- UserName -------->
-        <a href="{% url 'logout' %}">Выйти</a>
-        <p>Суповик-Затейник:</p>
-        <p class="user_name">
-            {{user.username}}
-
-        </p>
+        <a href="{% url 'logout' %}" class="exit">Выход</a>
     </h2>
+
+        <p class="supovik">#cуповик-затейник:</p>
+        <p class="user_name">{{user.username}}</p>
+
     <button class="button_finish">Готовить</button>
 </header>
 <main>
@@ -140,14 +139,14 @@
         <div class="pop_up_window">
             <button class="button_close">X</button>
             <div class="pop_order">
-                <h2>Вкусняшка супчик !</h2>
+<!--                <h2>Вкусняшка супчик !</h2>-->
+                <h2>по рецепту от {{user.username}}</h2>
+
                 <ul id="check_list">
-                    <li>состав</li>
-                    <li>все вкусно</li>
                 </ul>
             </div>
 <!--            <a href="{% url 'send email' %}"><button class="button_close">Отправить</button></a>-->
-             <button class="button_close">Отправить</button>
+             <button class="button_send">Заказать</button>
 
            </div>
     </div>

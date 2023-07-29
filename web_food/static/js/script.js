@@ -45,7 +45,7 @@ let exrtaLi = document.querySelectorAll('.extraElement');
 //         console.log('!!!!')
 //     })
 // })
-let sendMailButton = document.querySelector(".button_close")
+let sendMailButton = document.querySelector(".button_send")
 
 
 finishButton.addEventListener('click', function() {

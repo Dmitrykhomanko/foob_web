@@ -5,14 +5,14 @@
     font-weight: 500;
     font-style: normal;
     }
-    
+
     @font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto-Regular.woff2') format('woff2'), url('Roboto-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     }
-    
+
     @font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto-Bold.woff2') format('woff2'), url('Roboto-Bold.woff') format('woff');
@@ -26,7 +26,7 @@
         font-weight: 700;
         font-style: normal;
         }
-    
+
     @font-face {
         font-family: 'Pomidorko';
         src: url('fonts/Pomidorko_cyr.ttf') format('woff2'), url('Roboto-Bold.woff') format('woff');
@@ -44,7 +44,7 @@
         src: url('fonts/Ustroke\ Regular.ttf') format('woff2'), url('Roboto-Bold.woff') format('woff');
         font-style: normal;
         }
-      
+
 
 *{
     margin:0 ;
@@ -60,79 +60,26 @@ button{
 ul,
 li{
     text-decoration: none;
-     list-style: none; 
+     list-style: none;
 }
 
 /***************** Страница Регистрации *****************/
 
-
-header{
-    width: 100%;
-    max-width: 1200px;
-    height: 70px;
-    background-color:whitesmoke;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    /* background-color: #E19C16; */
-    /* background-color: rgb(232 149 79); */
-    background-color: rgb(209 144 90 / 53%);   
-}
-header button{
-    background-color: rgb(228 203 100);
-    width: 18%;
-    height: 43px;
-    margin: 13px;
-    color: rgb(232, 94, 94);
-    font-family: 'Ustroke';
-    font-size: 37px;
-    line-height: 24px;
-    padding: 1px;
-    border-radius: 5px;
-    border:2px solid #c3710d;
-}
-.button_restart:hover{
-    background-color: rgb(238, 201, 56);
-    color:rgb(240, 21, 21);
-}
-.button_finish:hover{
-    background-color: rgb(59, 212, 45);
-    color:rgb(193, 26, 26);
-}
-
-
 /***************       Регистрация      ***************/
 
-
-
-
-main{ 
+main{
     max-width: 1200px;
     height: 700px;
-
+    background-image: url(img/translucent-image\ \(1\).png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     /* background-color: rgb(209, 193, 132); */
     background-color: #f1ece6;
     margin: 0 auto;
     color: #8f5208;
 }
-
-.wrapper__identification{
-    position: relative;
-    width: 50%;
-    height: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    
-    gap: 30px;
-
-}
-.section_user_enter h1, h2{
+.zdraste{
     text-align: center;
     margin: 11px;
     color: rgba(181, 65, 65, 0.899);
@@ -140,77 +87,113 @@ main{
     font-size: 41px;
     line-height: 34px;
     padding: 1px;
+
 }
 
-   /**********     Input  + Button  позиционирование *************/
-.section_user_enter input, button{
+/************** ТАбличка *************/
+
+/************** Обертка таблицы *************/
+.wrapper__identification{
+    position: relative;
+    width: 29%;
+    height: 317px;
+    margin: 0 auto;
     display: block;
     text-align: center;
-    width: 50%;
-    height: 50px;
-    margin: 0 auto;
-    margin-top: 10px; 
+    /* border: 2px solid palevioletred; */
+    /* background-color: antiquewhite; */
+    /* background-color:#faebd76b; */
+    /* background-color:#a19a93; */
+    border-radius: 12px;
+    margin-top: 84px;
+
 }
 
- /**********     Inputs  цвета + шрифт   *************/
+/**************  Вход   Регистрация *************/
 
-.section_user_enter input{
-    background-color: #f1ece6;
-    border-radius: 8px;
-    color: rgb(34, 20, 156);
-    font-weight: 200;
-    font-size: 28px;
-    line-height: 21px;
-    padding: 1px;
-    border: 2px solid #b37a08;
+.tabs_header{
+    display: flex;
 }
- /*************     Inputs  Placeholder    *************/
+h2{
+       text-align: center;
+    margin: 7px;
+    color: rgba(181, 65, 65, 0.899);
+    font-family: 'Beer';
+    font-size: 41px;
+    line-height: 43px;
+    padding: 5px;
+    border: 1px solid #b37a08;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-.section_user_enter input[type=text]::placeholder {
-    font-family: 'beer';
-    font-weight: 200;
-    font-size: 28px;
-   
-    }
-    input[type=text]::-webkit-input-placeholder {
-        font-family: 'beer';
-        font-weight: 200;
-      
-        
-    }
-    input[type=text]::-moz-placeholder {
-        font-family: 'beer';
-    font-weight: 200;
-   
-    
-    }
-    input[type=text]:-moz-placeholder {
-        font-family: 'beer';
-        font-weight: 200;
-        font-size: 28px;
-       
-        
-    }
-    input[type=text]:-ms-input-placeholder {
-        font-family: 'beer';
-        font-weight: 200;
-       
-    }
- 
- 
+/**************  div с  логи + пароля  *************/
+
+.user_enter{
+    width: 100%;
+    position: relative;
+    margin-top: -30px;
+    height: 300px;
+}
 
 
+/**************  div Входа с логи и пароля  *************/
+
+.page_enter{
+    width: 100%;
+    height: 238px;
+    display: none;
+
+}
+
+.first {
+    position: relative;
+    margin-top: 40px;
+}
 
 
 
+/**************  div Регистрация *************/
+
+.page_registration{
+    width: 100%;
+    height: 238px;
+
+    display: none;
+
+}
+
+.active{
+   display: block;
+   border-bottom:none ;
+   background-color:#f3dca8d6 ;
+}
+
+/* #f3dca8d6
+background-color:#e5e0d5;*/
+
+
+.can_see{
+    display: block;
+    background-color:#e5e0d5;
+    /* background-color:#f3dca8d6 ; */
+
+    border-radius: 15px;
+    height: 270px;
+    padding-top: 5px;
+}
 
 
 /**********     Buttons  цвета + шрифт   *************/
 
-.section_user_enter  button{
+button{
+    display: block;
+    text-align: center;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
     background-color: #f1ece6;
     border-radius: 8px;
-    /* border-color: #f1ece6; */
     color: rgb(89, 34, 34);
     font-family: 'Pomidorko';
     font-weight: 200;
@@ -220,260 +203,83 @@ main{
     border: 2px solid #b37a08;
 }
 
-
-.section_user_enter input:hover{
-    background-color: #e5e0d5;
-    
+.button_user_enter{
+    margin-top: 80px;
 }
-.section_user_enter button:hover{
+.button_registration{
+    margin-top: 20px;
+
+}
+
+input:hover{
+    background-color: #e5e0d5;
+
+}
+button:hover{
     background-color: #92e045;
     transition: 0.6;
 }
 
+ /**********     Input==  css_class_1    цвета + шрифт   *************/
 
-
-
-
-/****** Страница для кнопок с ингнридиентами*******/
-.page{
-    width: 100%;
-    min-height: 500px;
-    border: 2px solid #c3710d ;
-    border-radius: 9px;
-    margin-bottom: 10px;
-    background-color: #f3ebd9
-}
-
-
-/********** страница  Бульонами  ***************/
-
-.page__active__broth{
-    display: none;
-}
-.page__broth button{
-    width: 44%;
-    height: 123px;
-    display: inline-block;
-    font-size: 60px;
-    line-height: 32px;
-}
-
-
-/********** страница  Овощами  ***************/
-
-.page__vegetables button{
-    margin-top: 9px;
-}
-/********** страница  Крупами  ***************/
-
-.page__cereal button{
-    width: 28%;
-    height: 54px;
-    margin: 9px;
-    color: rgb(34, 20, 156);
-    font-family: 'Beer';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 28px;
-    padding: 7px;
-    border: none;
-    background-color: transparent;
-    margin-top: 16px;   
-}
-
-/********** страница  Сливки  ***************/
-
-.page__milk button{
-    width: 100%;
-   display: block;
-   font-size: 60px;
-   margin-top: 40px;
-}
-
-
-/********** страница  Зелень  ***************/
-
-.page__green button{
-    width: 42%;
-    font-size: 63px;
-    margin-top: 32px;
-    line-height: 33px;
-}
-
-
-.active_page{
-    display:block; 
-}
-
-
-
-.tab_cliked{
-    /* background-color: #debe7b; */
-    background-color: #f3ebd9;
-    border-bottom: none;  
-}
-
-.table h2{
-   text-align: center;
-   margin: 15px;
-   color: rgba(181, 65, 65, 0.899);
-   font-family: 'Pomidorko';
-   font-size: 38px;
-   line-height: 23px;
-   padding: 1px;
-    
-}
-
-
-.ingridient{
-    width: 21%;
-    height: 54px;
-    margin: 9px;
-    color: rgb(34, 20, 156);
-    font-family: 'Beer';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 37px;
-    line-height: 22px;
-    padding: 7px;
-    border: none;
-    background-color: transparent;
-    margin-top: 2px;
-}
-
-
-/***********    Кострюля   ***********/
-
-.pot_background_video{
-    width: 50%;
-    background-image: url(img/translucent-image.png) ;
-    height: 850px;
-    background-repeat: no-repeat;
-    background-size:contain ;
-    text-align: center;  
-}
-
-.pot{
-   margin-top: 150px; 
-   width: 400px;
-   height: 600px ;
-   margin: 0 auto; 
-} 
-
-
-/***********  Список Используемых Продуктов*************/
-.pot ul{
-   margin-top: 80px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
-
-#koctpyla-list{
-    margin-top: 88px;
-}
-
-.pot li{
-    color: rgb(250 40 40);
-    font-family: 'Beer';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 38px;
-    height: 30px;
-    
-    
-}
-
-.delete_button{
-        
-        color: rgb(250 40 40);
-        font-family: 'Beer';
-        font-style: normal;
-        font-size: 36px;
-        height: 30px;
-        width: 51px;
-        background: transparent;
-        border: none;
-   
-}
-
-.delete_span{
-    display: flex;
-    margin: 0 auto;
-    height: 32px;
-    margin-top: 6px;
-}
-
-   
-/********     footer    **********/
-
-footer{
-    margin: 0 auto;
-    width: 1200px;
-    height: 170px;
-    background-color:rgb(209 144 90 / 53%);
-}
-
-
-/**********  PopUp Winod   **************/
-.pop_up_wrapper {
-    background: rgb(0, 0, 0, 0.5);
-    width: 100%;  
-    height: 100%;
-    position: fixed;
-    left: 0; 
-    top: 0;
-    display: none;
- }
-
-.activ_pop{
-    display: flex;
-}
-
-.pop_up_window{
-    background-color:#ebd9d2;
-    width: 430px;
-    height: 530px;
-    position: relative;
-    margin: auto;
+ .css_class_1{
+    display: block;
     text-align: center;
-    border-radius: 15px;
-}
-
-.button_close{
-    color: rgb(250 40 40);
-    font-family: 'Beer';
-    font-style: normal;
-    font-size: 80px;
-    height: 1px;
-    width: 1px;
-    background: transparent;
-    border: none;
-    position: relative;
-    left: 235px;
-    bottom: 82px;
-}
-
-.pop_order{
-    width: 100%;
-    height: 500px;
+    width: 90%;
+    height: 50px;
     margin: 0 auto;
-    margin-top: -80px;
-    
+    margin-top: 10px;
+    background-color: #f1ece6;
+    border-radius: 8px;
+    color: rgb(34, 20, 156);
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 21px;
+    padding: 1px;
+    border: 2px solid #b37a08;
+
 }
-    
-.pop_order h2{
-    margin-top: 17px;
-    font-family: 'Beer';
-    color:rgba(181, 65, 65, 0.899);
-    /* background-color: #d7c4ac; */
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 29px; 
+ /*************     Inputs  Placeholder    *************/
+
+:focus {
+    outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important;
 }
 
+input::placeholder {
+    font-family: 'beer';
+}
+.section_user_enter input[type=text]::placeholder {
+    font-family: 'beer';
+    font-weight: 200;
+    font-size: 28px;
+
+    }
+    input[type=text]::-webkit-input-placeholder {
+        font-family: 'beer';
+        font-weight: 200;
+
+
+    }
+    input[type=text]::-moz-placeholder {
+        font-family: 'beer';
+    font-weight: 200;
+
+
+    }
+    input[type=text]:-moz-placeholder {
+        font-family: 'beer';
+        font-weight: 200;
+        font-size: 28px;
+
+
+    }
+    input[type=text]:-ms-input-placeholder {
+        font-family: 'beer';
+        font-weight: 200;
+
+    }
 
 
 
