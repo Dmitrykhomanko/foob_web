@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'soup.apps.SoupConfig'
+    'soup.apps.SoupConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -71,9 +72,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'web_food.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+#
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'web_food.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'NAME': 'dimka',
+        'USER': 'dimka',
+        'PASSWORD': 'dimka',
         'HOST': 'localhost',
         'PORT': '5432'
     }
