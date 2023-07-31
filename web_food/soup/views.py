@@ -23,7 +23,6 @@ def index_registration(request):
         form2 = CreationForm()
 
     return render(request, 'index_registration.html', {'form1': form1, 'form2': form2})
-
 def pot_and_tab(request):
     return render(request, 'pot_and_tab.html')
 
