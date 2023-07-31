@@ -17,7 +17,7 @@ def index_registration(request):
             return redirect('pot')
         if form2.is_valid():
             form2.save()
-            return redirect('pot')
+            return redirect('regist')
     else:
         form1 = AuthenticationForm()
         form2 = CreationForm()
